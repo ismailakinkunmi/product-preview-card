@@ -6,3 +6,5 @@
 
 - HTML5
 - CSS3
+
+### [preview site](https://ismailakinkunmi.github.io/product-preview-card/)
