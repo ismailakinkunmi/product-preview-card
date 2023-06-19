@@ -1,0 +1,142 @@
+:root {
+    --btn-color: hsl(158, 36%, 37%);
+    --main-background-color: hsl(30, 38%, 92%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --primary-color: hsl(228, 12%, 48%);
+    --heading-color: rgb(0, 0, 48);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 20px;
+}
+
+
+.card {
+    background-color: var(--card-background-color);
+    max-width: 375px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.card .product-image {
+    width: 100%;
+}
+
+.product-image img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.desktop {
+    display: none;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+.product-details .product-name {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.product-details .product-heading {
+    width: 80%;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.about-product {
+    width: 100%;
+}
+
+.price {
+    margin-right: .7rem;
+}
+
+.new {
+    color: var(--btn-color);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.old {
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--btn-color);
+    padding: .8rem;
+    color: var(--card-background-color);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(1, 49, 1);
+}
+
+.btn .fas {
+    margin-right: 8px;
+}
+
+
+@media screen and (min-width: 376px) {
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .card .product-image {
+        width: 55%;
+    }
+
+    .product-image img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+        max-height: 400px;
+    }
+
+    .product-details {
+        width: 45%;
+        gap: 24px;
+    }
+
+}
